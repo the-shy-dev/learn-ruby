@@ -46,3 +46,12 @@ puts n.to_i * 7
 # repitition
 5.times { puts "Hi"}
 15.times {puts rand(100)}
+
+# if-else
+condition = true
+condition_2 = false
+if condition && condition_2
+    puts "Hi"
+else
+    puts "Bye"
+end
