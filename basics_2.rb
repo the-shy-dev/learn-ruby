@@ -43,3 +43,26 @@ d.each do |word|
 end
 
 d.each {|word| p word + " "}
+
+e = (1..100).to_a
+print e.select{ |number| number.odd? }
+print "\n"
+# Hashes 
+myhash = {a: 1, b: 2, c: 3, d: 4, e: 5}
+puts myhash
+puts myhash[:c]
+myhash[:d] = 7
+myhash[:name] = "shydev"
+myhash.delete(:d)
+puts myhash.keys
+puts myhash.values
+puts myhash
+myhash.each { |somekey, somevalue| puts somevalue }
+
+myhash.each { |somekey, somevalue| puts "The key is #{somekey} and the value is #{somevalue}" }
+
+myhash.each { |k, v| myhash.delete(k) if v.to_i > 5 }
+
+puts myhash.select { |k, v| v.to_i.odd? }
+
+puts myhash
