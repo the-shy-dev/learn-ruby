@@ -3,7 +3,10 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <a href="/articles/<%= article.id %>">
+        <!--article_path helper returns "/articles/#{article.id}" 
+        when given an article. We can use it to tidy up our links 
+        in app/views/articles/index.html.erb:!-->
+      <a href="<%= article_path(article) %>">
         <%= article.title %>
       </a>
     </li>
