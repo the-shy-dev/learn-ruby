@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#indexa"
   root "articles#index"
-  resources :articles # maps all of the conventional routes for a collection of resources, such as articles
+  # 'resources' maps all of the conventional routes for a collection of resources, such as articles
+  resources :articles do
+    resources :comments
+  end
 end
